@@ -1,0 +1,63 @@
+.news-ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1d2a3a, #2a3f54); /* Gradient for a refined look */
+  color: #f8f9fa;
+  padding: 10px 0; /* Reduced padding for a smaller height */
+  position: fixed;
+  top: 90px;
+  left: 0;
+  z-index: 10; /* Lower z-index for the news ticker */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  border-bottom: 2px solid #ff4757; /* Red border for a more polished look */
+}
+
+.news-ticker {
+  display: flex;
+  align-items: center;
+  height: 25px; /* Reduced height */
+  animation: scroll 20s linear infinite; /* Smooth scrolling */
+}
+
+.news-ticker-text {
+  white-space: nowrap;
+  padding-left: 100%;
+  font-size: 1.8em; /* Larger font size for more impact */
+  font-weight: 500; /* Lighter weight for elegance */
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  letter-spacing: 0.15em; /* Increased letter spacing for better readability */
+  color: #ff4757; /* Bright, modern red color */
+  text-transform: uppercase; /* Bold and modern look */
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for text depth */
+  transition: transform 0.4s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.news-ticker-text:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  color: #1d8bf1; /* Change color on hover for interactivity */
+  text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Dropdown styles (example) */
+.dropdown {
+  position: relative;
+  z-index: 20; /* Higher z-index for dropdown to appear above the ticker */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 30; /* Ensure dropdown items are above ticker */
+  background-color: white; /* Example background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
